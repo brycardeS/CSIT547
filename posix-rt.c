@@ -96,7 +96,7 @@ int main() {
         pthread_create(&student_tid[i], NULL, student_thread, &student_id[i]);
     }
 
-    // wait for all threads to finish
+
     pthread_join(ta_tid, NULL);
     for (int i = 0; i < NUM_STUDENTS; i++) {
         pthread_join(student_tid[i], NULL);
